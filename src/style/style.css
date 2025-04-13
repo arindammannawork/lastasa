@@ -1,0 +1,34 @@
+@import "tailwindcss";
+body {
+  @apply bg-black text-white overflow-x-hidden;
+}
+.bdr {
+  @apply border border-amber-300;
+}
+.searchComponentWraper {
+  /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); */
+  /* box-shadow: 0 0 60px rgba(255, 255, 255, 0.6); */
+}
+textarea,
+.minimalScroolBox {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ccc transparent; /* Firefox */
+  resize: none;
+}
+
+/* Chrome, Edge, Safari */
+textarea::-webkit-scrollbar,
+.minimalScroolBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track,
+.minimalScroolBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb,
+.minimalScroolBox::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
