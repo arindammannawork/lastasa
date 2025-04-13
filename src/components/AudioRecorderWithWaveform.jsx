@@ -357,7 +357,7 @@ function AudioRecoderWraper({ children }) {
     }, []);
     return (<>
         <AudioRecoderContextApi.Provider value={{
-            canvasRef, recording, setRecording, stopRecording, startRecording, audioURL
+            canvasRef, recording, setRecording, stopRecording, startRecording, audioURL, setAudioURL
         }}>
             {children}
         </AudioRecoderContextApi.Provider>
@@ -379,7 +379,7 @@ function AudioRecoderStartButton(params) {
 }
 
 function AudioPlayer() {
-    const { audioURL } = useContext(AudioRecoderContextApi);
+    const { audioURL, setAudioURL } = useContext(AudioRecoderContextApi);
     const getAudioDurationFromBlobURL = (blobUrl) => {
         return new Promise((resolve, reject) => {
             const audio = document.createElement('audio');
@@ -536,7 +536,12 @@ function AudioPlayer() {
 
             />
 
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 relative">
+                <button type='button' className='flex items-center justify-center gap-2 h-[42px] w-[42px] text-white/70 border shrink-0 border-white/20 rounded-full hover:bg-white/10 transition' onClick={() => {
+                    setAudioURL(null)
+                }}>
+                    {cros_svg}
+                </button>
                 {/* Play/Pause Button */}
                 <button type='button'
                     onClick={togglePlay}
