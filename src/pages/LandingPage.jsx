@@ -196,7 +196,7 @@ function LandingPage() {
                                                         ...prev,
                                                         text: e.target.value
                                                     }))
-                                                }} value={formdata.text} placeholder='Search anything by text, voice, or image... ' name="prompt" id="" className='w-full text-white text-xl focus:border-0 focus-visible:border-0 grow min-h-10 focus-visible:outline-0' onFocus={() => setSearchComponentFocus(true)}
+                                                }} value={formdata.text} placeholder='Search anything using text, voice, or image — in any language!' name="prompt" id="" className='w-full text-white text-xl focus:border-0 focus-visible:border-0 grow min-h-10 focus-visible:outline-0' onFocus={() => setSearchComponentFocus(true)}
                                                     onBlur={() => setSearchComponentFocus(false)} />
                                                 <div className=' flex items-center gap-2'>
 
