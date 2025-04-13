@@ -113,7 +113,7 @@ function LandingPage() {
                 const audioBlob = await response?.blob();
                 formData_send.append("voice", audioBlob);
             }
-            const res = await fetch("http://164.52.192.95:4051/search", {
+            const res = await fetch("https://collie-one-verbally.ngrok-free.app/search", {
                 method: "POST",
                 headers: {
                     // "Content-Type": "multipart/form-data",
