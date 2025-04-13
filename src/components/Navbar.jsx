@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router';
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +23,8 @@ function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-4">
-                    <a href="/" className="hover:text-blue-400 transition duration-300">Home</a>
-                    <a href="/about" className="hover:text-blue-400 transition duration-300">About</a>
+                    <Link to="/" className="hover:text-blue-400 transition duration-300">Home</Link>
+                    <Link to="/about" className="hover:text-blue-400 transition duration-300">About</Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -46,8 +47,8 @@ function Navbar() {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden mt-2 px-4 pt-2 pb-4 space-y-2">
-                    <a href="/" className="block py-2 hover:text-blue-400 transition duration-300">Home</a>
-                    <a href="/about" className="block py-2 hover:text-blue-400 transition duration-300">About</a>
+                    <Link href="/" className="block py-2 hover:text-blue-400 transition duration-300">Home</Link>
+                    <Link href="/about" className="block py-2 hover:text-blue-400 transition duration-300">About</Link>
                 </div>
             )}
         </nav>
